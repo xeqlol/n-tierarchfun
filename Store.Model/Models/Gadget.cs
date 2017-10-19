@@ -1,6 +1,6 @@
 ﻿namespace Store.Model
 {
-    class Gadget
+    public class Gadget
     {
         public int GadgetID { get; set; }
         public string Name { get; set; }
