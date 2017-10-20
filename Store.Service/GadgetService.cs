@@ -41,7 +41,7 @@ namespace Store.Service
 
         public IEnumerable<Gadget> GetCategoryGadgets(string categoryName, string gadgetName = null)
         {
-            // this is very bad code, DO NOT EVEN MIND TO USE IT IN PRODUCTION
+            // this is a very bad code, DO NOT EVEN MIND TO USE IT IN PRODUCTION
             // seriously, bruh, DONT
             return categoriesRepository.GetCategoryByName(categoryName).Gadgets.Where(x => x.Name.ToLower().Contains(gadgetName.ToLower().Trim()));
         }
