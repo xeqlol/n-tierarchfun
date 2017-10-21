@@ -10,7 +10,7 @@ namespace Store.Data
 {
     // im too lazy to create db manually, sorry
     // moreover, i hate this as fuck
-    class StoreSeedData : DropCreateDatabaseIfModelChanges<StoreEntities>
+    public class StoreSeedData : DropCreateDatabaseIfModelChanges<StoreEntities>
     {
         protected override void Seed(StoreEntities context)
         {
