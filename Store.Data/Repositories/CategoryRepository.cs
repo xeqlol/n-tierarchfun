@@ -5,13 +5,13 @@ using System.Linq;
 
 namespace Store.Data.Repositories
 {
-    class CategoryRepository : RepositoryBase<Category>, ICategoryRepository
+    public class CategoryRepository : RepositoryBase<Category>, ICategoryRepository
     {
         public CategoryRepository(IDbFactory dbFactory) : base(dbFactory) { }
 
         public Category GetCategoryByName(string categoryName)
         {
-            return this.DbContext.Categories.Where(c => c.Name == categoryName).FirstOrDefault();
+            return this.DbContext.Categories.FirstOrDefault(c => c.Name == categoryName);
         }
 
         public override void Update(Category entity)

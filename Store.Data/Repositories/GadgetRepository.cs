@@ -3,7 +3,7 @@ using Store.Model;
 
 namespace Store.Data.Repositories
 {
-    class GadgetRepository : RepositoryBase<Gadget>, IGadgetRepository
+    public class GadgetRepository : RepositoryBase<Gadget>, IGadgetRepository
     {
         public GadgetRepository(IDbFactory dbFactory) : base(dbFactory) { }
     }
